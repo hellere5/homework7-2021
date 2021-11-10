@@ -9,6 +9,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.querySelector("#volume").innerHTML = "100%";
 });
 
 // Pause Button
@@ -59,7 +60,7 @@ document.querySelector("#mute").addEventListener("click", function(){
 });
 
 // Volume Slider
-document.querySelector("#slider").addEventListener("change", function(){
+document.querySelector("#slider").addEventListener("click", function(){
 	console.log(this.value);
 	let vol = document.querySelector("#volume").innerHTML = this.value + "%";
 	video.volume = (this.value/100);
